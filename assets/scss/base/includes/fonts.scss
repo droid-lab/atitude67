@@ -1,0 +1,11 @@
+/// dctb-sass
+/// Sass Boilerplate to start new project with some functionalities.
+/// @author Diogo Cezar <diogo@diogocezar.com>
+
+// Fonts
+// Set the project fonts here
+
+@include font-face("LeagueSpartan-Bold", "../../../fonts/LeagueSpartan-Bold", null, null, eot woff ttf svg);
+
+$font-primary   : 'Poppins', sans-serif;
+$font-secondary : 'LeagueSpartan-Bold', sans-serif;
