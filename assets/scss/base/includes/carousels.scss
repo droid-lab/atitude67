@@ -6,54 +6,7 @@
 // Set the project carousels here
 
 .carousel-default{
-	.owl-nav{
-	    margin-top: 8px!important;
-	    position: absolute;
-	    right: 0;
-	    .owl-prev, .owl-next{
-		    margin: 0!important;
-		    padding: 0!important;
-		    background-color: transparent!important;
-	    }
-	    .owl-prev{
-	    	margin-right: 48px!important;
-	    }
-	}
-
-	.nav-left{
-		content: url('../../../images/base/esss-base-nav-left.svg');
-		height: 15px;
-		width: 15px;
-	}
-
-	.nav-right{
-		content: url('../../../images/base/esss-base-nav-right.svg');
-		height: 15px;
-		width: 15px;
-	}
-
-	.owl-dots {
-	    position: absolute;
-	    margin-top: 10px;
-	    right: 15px;
-	   	min-width: 50px;
-		counter-reset: slides-num;
-	    font-size: 0.85em;
-	    font-family: "LeagueSpartan-Bold", sans-serif;
-		&:after {
-			content: " " counter(slides-num);
-		}
-	}
-
-	.owl-dot {
-		counter-increment: slides-num;
-		span {
-			display: none!important;
-		}
-		&.active {
-			&:before {
-				content: counter(slides-num) " /" ;
-			}
-		}
-	}
+	position:relative;
+	float:left;
+	width:100%;
 }

@@ -5,7 +5,12 @@
 // Fonts
 // Set the project fonts here
 
-@include font-face("LeagueSpartan-Bold", "../../../fonts/LeagueSpartan-Bold", null, null, eot woff ttf svg);
+@include font-face("BebasNeueBold", "../../../fonts/BebasNeueBold", null, null, eot woff ttf svg);
+@include font-face("BebasNeueLight", "../../../fonts/BebasNeueLight", null, null, eot woff ttf svg);
+@include font-face("BebasNeueRegular", "../../../fonts/BebasNeueRegular", null, null, eot woff ttf svg);
+@include font-face("Neoneon", "../../../fonts/Neoneon", null, null, eot woff ttf svg);
 
-$font-primary   : 'Poppins', sans-serif;
-$font-secondary : 'LeagueSpartan-Bold', sans-serif;
+$font-primary       : 'BebasNeueRegular', sans-serif;
+$font-primary-bold  : 'BebasNeueBold', sans-serif;
+$font-primary-light : 'BebasNeueLight', sans-serif;
+$font-secondary     : 'Neoneon', sans-serif;

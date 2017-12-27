@@ -1,52 +1,30 @@
 @font-face {
-  font-family: "LeagueSpartan-Bold";
-  src: url("../../../fonts/LeagueSpartan-Bold.eot?") format("eot"), url("../../../fonts/LeagueSpartan-Bold.woff") format("woff"), url("../../../fonts/LeagueSpartan-Bold.ttf") format("truetype"), url("../../../fonts/LeagueSpartan-Bold.svg#LeagueSpartan-Bold") format("svg"); }
+  font-family: "BebasNeueBold";
+  src: url("../../../fonts/BebasNeueBold.eot?") format("eot"), url("../../../fonts/BebasNeueBold.woff") format("woff"), url("../../../fonts/BebasNeueBold.ttf") format("truetype"), url("../../../fonts/BebasNeueBold.svg#BebasNeueBold") format("svg"); }
 
-.carousel-default .owl-nav {
-  margin-top: 8px !important;
-  position: absolute;
-  right: 0; }
-  .carousel-default .owl-nav .owl-prev, .carousel-default .owl-nav .owl-next {
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: transparent !important; }
-  .carousel-default .owl-nav .owl-prev {
-    margin-right: 48px !important; }
+@font-face {
+  font-family: "BebasNeueLight";
+  src: url("../../../fonts/BebasNeueLight.eot?") format("eot"), url("../../../fonts/BebasNeueLight.woff") format("woff"), url("../../../fonts/BebasNeueLight.ttf") format("truetype"), url("../../../fonts/BebasNeueLight.svg#BebasNeueLight") format("svg"); }
 
-.carousel-default .nav-left {
-  content: url("../../../images/base/esss-base-nav-left.svg");
-  height: 15px;
-  width: 15px; }
+@font-face {
+  font-family: "BebasNeueRegular";
+  src: url("../../../fonts/BebasNeueRegular.eot?") format("eot"), url("../../../fonts/BebasNeueRegular.woff") format("woff"), url("../../../fonts/BebasNeueRegular.ttf") format("truetype"), url("../../../fonts/BebasNeueRegular.svg#BebasNeueRegular") format("svg"); }
 
-.carousel-default .nav-right {
-  content: url("../../../images/base/esss-base-nav-right.svg");
-  height: 15px;
-  width: 15px; }
+@font-face {
+  font-family: "Neoneon";
+  src: url("../../../fonts/Neoneon.eot?") format("eot"), url("../../../fonts/Neoneon.woff") format("woff"), url("../../../fonts/Neoneon.ttf") format("truetype"), url("../../../fonts/Neoneon.svg#Neoneon") format("svg"); }
 
-.carousel-default .owl-dots {
-  position: absolute;
-  margin-top: 10px;
-  right: 15px;
-  min-width: 50px;
-  counter-reset: slides-num;
-  font-size: 0.85em;
-  font-family: "LeagueSpartan-Bold", sans-serif; }
-  .carousel-default .owl-dots:after {
-    content: " " counter(slides-num); }
-
-.carousel-default .owl-dot {
-  counter-increment: slides-num; }
-  .carousel-default .owl-dot span {
-    display: none !important; }
-  .carousel-default .owl-dot.active:before {
-    content: counter(slides-num) " /"; }
+.carousel-default {
+  position: relative;
+  float: left;
+  width: 100%; }
 
 * {
   outline: none; }
 
 body {
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  font-family: "BebasNeueRegular", sans-serif;
   background-color: #fff;
   color: #000; }
 
@@ -89,7 +67,7 @@ a {
   background: #EEEEEE; }
 
 h1, h2, h3, h4 {
-  font-family: "Poppins", sans-serif;
+  font-family: "BebasNeueRegular", sans-serif;
   color: #000; }
 
 h1 {
@@ -109,7 +87,7 @@ h4 {
   font-weight: 600; }
 
 .title-decorative {
-  font-family: "LeagueSpartan-Bold", sans-serif;
+  font-family: "Neoneon", sans-serif;
   color: #FF0000;
   font-size: 0.8em;
   letter-spacing: 5px;
@@ -138,7 +116,7 @@ h4 {
     display: none !important; }
 
 .title-small {
-  font-family: "LeagueSpartan-Bold", sans-serif;
+  font-family: "Neoneon", sans-serif;
   color: #FF0000;
   font-size: 0.8em;
   letter-spacing: 5px;

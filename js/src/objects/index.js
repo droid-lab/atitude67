@@ -7,7 +7,7 @@ Index = {
 				pagination         : true,
 				items              : 1,
 				dots               : true,
-				autoplay           : true,
+				autoplay           : false,
 				autoplayTimeout    : 3000,
 				autoplayHoverPause : true,
 				singleItem         : true,

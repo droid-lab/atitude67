@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "BebasNeueBold";
+  src: url("../../../fonts/BebasNeueBold.eot?") format("eot"), url("../../../fonts/BebasNeueBold.woff") format("woff"), url("../../../fonts/BebasNeueBold.ttf") format("truetype"), url("../../../fonts/BebasNeueBold.svg#BebasNeueBold") format("svg"); }
+
+@font-face {
+  font-family: "BebasNeueLight";
+  src: url("../../../fonts/BebasNeueLight.eot?") format("eot"), url("../../../fonts/BebasNeueLight.woff") format("woff"), url("../../../fonts/BebasNeueLight.ttf") format("truetype"), url("../../../fonts/BebasNeueLight.svg#BebasNeueLight") format("svg"); }
+
+@font-face {
+  font-family: "BebasNeueRegular";
+  src: url("../../../fonts/BebasNeueRegular.eot?") format("eot"), url("../../../fonts/BebasNeueRegular.woff") format("woff"), url("../../../fonts/BebasNeueRegular.ttf") format("truetype"), url("../../../fonts/BebasNeueRegular.svg#BebasNeueRegular") format("svg"); }
+
+@font-face {
+  font-family: "Neoneon";
+  src: url("../../../fonts/Neoneon.eot?") format("eot"), url("../../../fonts/Neoneon.woff") format("woff"), url("../../../fonts/Neoneon.ttf") format("truetype"), url("../../../fonts/Neoneon.svg#Neoneon") format("svg"); }
+
+body {
+  color: #fff;
+  background-color: #000;
+  font-size: 14px; }
+
+/* Extends */
+.bgs, #home, #group-bg, #blog, #contact {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-position: top center;
+  background-size: cover; }
+
+.title-big, #group-bg #videos h1, #group-bg #videos h2, #group-bg #agenda h1, #contact h1 {
+  margin-top: 60px;
+  font-size: 6em;
+  font-family: "Neoneon", sans-serif !important;
+  color: #fff !important;
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center; }
+
+#home {
+  background-image: url("../../../images/bg-lg-01.jpg");
+  height: 1208px; }
+  @media only screen and (max-width: 1200px) {
+    #home {
+      background-image: url("../../../images/bg-md-01.jpg");
+      height: 755px; } }
+  @media only screen and (max-width: 768px) {
+    #home {
+      background-image: url("../../../images/bg-sm-01.jpg");
+      height: 483px; } }
+
+#group-bg {
+  background-image: url("../../../images/bg-lg-02.jpg");
+  height: 1624px; }
+  @media only screen and (max-width: 1200px) {
+    #group-bg {
+      background-image: url("../../../images/bg-md-02.jpg");
+      height: 1015px; } }
+  @media only screen and (max-width: 768px) {
+    #group-bg {
+      background-image: url("../../../images/bg-sm-02.jpg");
+      height: 650px; } }
+  #group-bg #videos h2 {
+    font-size: 4em; }
+
+#blog {
+  background-image: url("../../../images/bg-lg-03.jpg");
+  height: 580px; }
+  @media only screen and (max-width: 1200px) {
+    #blog {
+      background-image: url("../../../images/bg-md-03.jpg");
+      height: 363px; } }
+  @media only screen and (max-width: 768px) {
+    #blog {
+      background-image: url("../../../images/bg-sm-03.jpg");
+      height: 232px; } }
+
+#contact {
+  background-image: url("../../../images/bg-lg-04.jpg");
+  height: 516px; }
+  #contact h2 {
+    position: relative;
+    float: left;
+    margin-top: 40px;
+    font-size: 2.5em;
+    width: 100%; }
+    #contact h2 a {
+      color: #fff !important;
+      font-family: "BebasNeueLight", sans-serif !important;
+      font-size: 1em;
+      font-weight: normal;
+      text-align: center;
+      letter-spacing: 2px;
+      width: 100%;
+      position: relative;
+      float: left; }
+      #contact h2 a span {
+        font-family: "BebasNeueBold", sans-serif !important; }
+  #contact h3 {
+    color: #fff !important;
+    font-family: "BebasNeueLight", sans-serif !important;
+    font-size: 2em;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 2px;
+    width: 100%;
+    position: relative;
+    float: left; }
+    #contact h3 span {
+      font-family: "BebasNeueBold", sans-serif !important; }
+  @media only screen and (max-width: 1200px) {
+    #contact {
+      background-image: url("../../../images/bg-md-04.jpg");
+      height: 323px; } }
+  @media only screen and (max-width: 768px) {
+    #contact {
+      background-image: url("../../../images/bg-sm-04.jpg");
+      height: 207px; } }
