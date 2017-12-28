@@ -231,6 +231,10 @@ body{
 			@extend .title-big;
 			margin-top: 1.5em!important;
 			margin-bottom: 1.3em!important;
+			@include responsive(s1){
+				margin-top: 0.7em!important;
+				margin-bottom: 0.7em!important;
+			}
 		}
 		.row{
 			margin: 0px;
@@ -287,19 +291,29 @@ body{
 		height: 232px;
 	}
 	.item{
+		text-align: center;
 		img{
-			margin-top: 2.45em;
 			width: 95%;
+			margin: 0 auto;
+			margin-top: 2.45em;
+			@include responsive(s1){
+				width: 70%;
+			}
 		}
 		h1{
+			text-align: left;
 			margin-top: 1em;
 			font-family: $font-primary;
 			color: $color-white;
 			font-size: 4em;
 			max-width: 320px;
 			margin-bottom: 0em;
+			@include responsive(s1){
+				font-size: 3em;
+			}
 		}
 		h2{
+			text-align: left;
 			margin-top: 0.5em;
 			font-family: $font-primary-bold;
 			color: $color-white;
@@ -308,7 +322,8 @@ body{
 			margin-bottom: 1em;
 		}
 		p{
-			font-size: 1.1em;
+			text-align: left;
+			font-size: 0.9em;
 			text-transform: none;
 			max-width: 400px;
 			font-family: $font-tertiary;
@@ -353,6 +368,25 @@ body{
 		float: left;
 		span{
 			font-family: $font-primary-bold!important;
+		}
+	}
+	footer{
+		position: relative;
+		float: left;
+		width:100%;
+		margin-top: 5em;
+		padding-left: 17em;
+		padding-right: 17em;
+		ul{
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			align-items: center;
+			li{
+				list-style: none;
+			}
 		}
 	}
 	background-image: url('../../../images/bg-lg-04.jpg');
