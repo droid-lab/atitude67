@@ -5,8 +5,185 @@
 // Carousels
 // Set the project carousels here
 
-.carousel-default{
+.carousel-default, .carrousel-agenda-mobile{
 	position:relative;
 	float:left;
 	width:100%;
+}
+
+.owl-carousel{
+	.owl-nav{
+		position: absolute;
+		top: calc(50% - 25px);
+		margin: 0px;
+		width: 100%;
+		.owl-prev{
+			background: none;
+			padding: 0px;
+			border-radius: 0px;
+			float: left;
+			&:hover{
+				background-color:transparent;
+			}
+			.arrow-prev{
+				height: 50px;
+				width: 50px;
+				position: relative;
+				float: left;
+				background-image: url("../../../images/arrow-prev.svg");
+				margin-left: -30px;
+				@include transition(0.15s);
+				@include responsive(s2){
+					margin-right: 0px;
+				}
+				&:hover{
+					@include scale(0.9);
+				}
+			}
+		}
+		.owl-next{
+			background: none;
+			padding: 0px;
+			border-radius: 0px;
+			float: right;
+			&:hover{
+				background-color:transparent;
+			}
+			.arrow-next{
+				height: 50px;
+				width: 50px;
+				position: relative;
+				float: left;
+				background-image: url("../../../images/arrow-next.svg");
+				margin-right: -30px;
+				@include transition(0.15s);
+				@include responsive(s2){
+					margin-right: 0px;
+				}
+				&:hover{
+					@include scale(0.9);
+				}
+			}
+		}
+	}
+	.owl-dots{
+		margin-top: 1em;
+		.owl-dot{
+			span{
+				width: 15px;
+				height: 15px;
+				@include transition(0.15s);
+				@include responsive(s2){
+					width: 7px;
+					height: 7px;
+				}
+			}
+			&.active{
+				span{
+					background: $color-blue;
+				}
+			}
+			&:hover{
+				span{
+					background: $color-blue;
+				}
+			}
+		}
+	}
+}
+
+.carrousel-agenda{
+	.item{
+		position: relative;
+		float: left;
+		width: 100%;
+		margin-left: 3em;
+	}
+	.owl-nav{
+		top: calc(50% - 49px);
+	}
+	.owl-dots{
+		.owl-dot{
+			margin-top: 1em;
+			&.active{
+				span{
+					background: $color-purple!important;
+				}
+			}
+			&:hover{
+				span{
+					background: $color-purple!important;
+				}
+			}
+		}
+	}
+}
+
+.carrousel-agenda-mobile{
+	.item{
+		position: relative;
+		float: left;
+		width: 100%;
+		margin-left: 3em;
+	}
+	.owl-nav{
+		top: calc(50% - 49px);
+	}
+	.owl-dots{
+		.owl-dot{
+			margin-top: 1em;
+			&.active{
+				span{
+					background: $color-purple!important;
+				}
+			}
+			&:hover{
+				span{
+					background: $color-purple!important;
+				}
+			}
+		}
+	}
+}
+
+.carrousel-blog{
+	.owl-dots{
+		.owl-dot{
+			margin-top: 1em;
+			&.active{
+				span{
+					background: $color-dark-blue!important;
+				}
+			}
+			&:hover{
+				span{
+					background: $color-dark-blue!important;
+				}
+			}
+			@include responsive(s1){
+				margin-top: 0px;
+			}
+		}
+		@include responsive(s1){
+			margin-top: 0px;
+		}
+	}
+}
+
+@include responsive(s2){
+	.owl-carousel .owl-nav .owl-next{
+		margin-right: -60px;
+	}
+	.owl-carousel .owl-nav .owl-prev{
+		margin-left: -25px;
+	}
+}
+
+@media only screen and (max-width: 866px) {
+	.owl-carousel .owl-nav .owl-next{
+		display: none;
+	}
+	.owl-carousel .owl-nav .owl-prev{
+		display: none;
+	}
 }

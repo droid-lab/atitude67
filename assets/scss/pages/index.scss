@@ -70,10 +70,38 @@ body{
 			li{
 				list-style: none;
 				a{
+					position:relative;
+					float: left;
 					font-size: 2.7em;
 					color: rgba(255, 255, 255, 0.9);
 					font-family: $font-primary;
 					font-weight: normal;
+					&::after{
+						position: absolute;
+						top: 100%;
+						left: 0;
+						width: 100%;
+						height: 4px;
+						background: rgba(255,255,255,0.9);
+						content: '';
+						opacity: 0;
+						-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+						-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+						transition: opacity 0.3s, transform 0.3s;
+						-webkit-transform: translateY(10px);
+						-moz-transform: translateY(10px);
+						transform: translateY(10px);
+						@include responsive(s1){
+							height: 2px;
+						}
+					}
+					&:hover::after,
+					&:focus::after{
+						opacity: 1;
+						-webkit-transform: translateY(0px);
+						-moz-transform: translateY(0px);
+						transform: translateY(0px);
+					}
 				}
 			}
 		}
@@ -121,6 +149,8 @@ body{
 			li{
 				list-style: none;
 				a{
+					position: relative;
+					float: left;
 					img{
 						height: 100px;
 						width: 100px;
@@ -171,6 +201,38 @@ body{
 			margin-right: 0em;
 		}
 	}
+	// Ivana
+	.button--ivana{
+		&::before,
+		&::after{
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    margin: -50px 0 0 -50px;
+		    width: 100px;
+		    height: 100px;
+		    border-radius: 50%;
+		    content: '';
+		    opacity: 0;
+		    pointer-events: none;
+		    box-shadow: 0 0 0 10px $color-white;
+			@include responsive(s1) {
+			    margin: -30px 0 0 -30px;
+			    width: 60px;
+			    height: 60px;
+			}
+		}
+		&:hover::before{
+			-webkit-animation: animation-button-ivana-1 0.5s forwards;
+			animation: animation-button-ivana-1 0.5s forwards;
+		}
+		&:hover::after{
+			-webkit-animation: animation-button-ivana-2 0.8s forwards;
+			animation: animation-button-ivana-2 0.8s forwards;
+			animation-delay: 0.1s;
+			-webkit-animation-delay: 0.1s;
+		}
+	}
 }
 
 #group-bg{
@@ -183,17 +245,23 @@ body{
 	}
 	@include responsive(s3){
 		background-image: url('../../../images/bg-sm-02.jpg');
-		height: 650px;
+		height: 868px;
 	}
 	#videos{
 		h1{
 			@extend .title-big;
 			margin-top: 0.5em;
+			@include responsive(s1){
+				font-size: 4.5em;
+			}
 		}
 		h2{
 			@extend .title-big;
 			font-size: 4em;
 			margin-top: 0.1em;
+			@include responsive(s1){
+				font-size: 3em;
+			}
 		}
 		.box-video{
 			display: flex;
@@ -203,6 +271,9 @@ body{
 			float: left;
 			width: 100%;
 			margin-top: 3em;
+			@include responsive(s1){
+				margin-top: 2em;
+			}
 			.video-decoration{
 				padding: 30px;
 				background-image: url('../../../images/bg-video.png');
@@ -215,13 +286,26 @@ body{
 				align-items: center;
 				position: relative;
 				float: left;
+				@include responsive(s2){
+					background-image: none;
+				}
 				.video{
 					border: 15px solid black;
 					border-top-width: 5px;
 					border-bottom-width: 5px;
-					height: 100%;
+					height: 110%;
 					width: 93%;
 					margin-left: 25px;
+					border-radius: 21px;
+					@include responsive(s1){
+						border: 15px solid black;
+						border-top-width: 5px;
+						border-bottom-width: 5px;
+						height: 114%;
+						width: 94%;
+						margin-left: 25px;
+						border-radius: 15px;
+					}
 				}
 			}
 		}
@@ -229,22 +313,26 @@ body{
 	#agenda{
 		h1{
 			@extend .title-big;
-			margin-top: 1.5em!important;
-			margin-bottom: 1.3em!important;
+			margin-top: 0.9em!important;
+			margin-bottom: 0.9em!important;
 			@include responsive(s1){
 				margin-top: 0.7em!important;
 				margin-bottom: 0.7em!important;
+				font-size: 4.5em;
 			}
 		}
 		.row{
 			margin: 0px;
 			margin-bottom: 40px;
 		}
+		.last-row{
+			margin:0px;
+		}
 		.item{
 			h1{
 				margin-top: 0!important;
 				margin-bottom: 5px!important;
-				font-size: 8em!important;
+				font-size: 8em;
 				text-align: left;
 			}
 			h2{
@@ -275,6 +363,26 @@ body{
 				border-left: 2px solid $color-white;
 			}
 		}
+		.carrousel-agenda-mobile{
+			.item{
+			position: relative;
+			float: left;
+			width: 75%;
+			padding: 3em;
+			border: 1px solid #fff;
+			margin-left: 12.4%;
+			margin-right: 5%;
+			text-align: center !important;
+				h1{
+					font-size: 6em!important;
+					text-align: center!important;
+				}
+				h2{
+					font-size: 3em!important;
+					text-align: center!important;
+				}
+			}
+		}
 	}
 }
 
@@ -292,17 +400,22 @@ body{
 	}
 	.item{
 		text-align: center;
+		margin-top: 4em;
+		@include responsive(s2){
+			margin-top: 2em;
+		}
 		img{
-			width: 95%;
+			width: 80%;
 			margin: 0 auto;
-			margin-top: 2.45em;
+			margin-bottom: 12px;
+			box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.39);
 			@include responsive(s1){
-				width: 70%;
+				width: 60%;
 			}
 		}
 		h1{
 			text-align: left;
-			margin-top: 1em;
+			margin-top: 0em;
 			font-family: $font-primary;
 			color: $color-white;
 			font-size: 4em;
@@ -310,6 +423,7 @@ body{
 			margin-bottom: 0em;
 			@include responsive(s1){
 				font-size: 3em;
+				max-width: initial;
 			}
 		}
 		h2{
@@ -320,6 +434,11 @@ body{
 			font-size: 2em;
 			max-width: 320px;
 			margin-bottom: 1em;
+			@include responsive(s1){
+				font-size: 1.5em;
+				max-width: initial;
+				margin-bottom: 0.5em;
+			}
 		}
 		p{
 			text-align: left;
@@ -334,6 +453,11 @@ body{
 #contact{
 	h1{
 		@extend .title-big;
+		@include responsive(s1){
+			font-size: 3em;
+			margin-top: 1em;
+			margin-bottom: 0px;
+		}
 	}
 	h2{
 		position: relative;
@@ -341,6 +465,11 @@ body{
 		margin-top:40px;
 		font-size: 2.5em;
 		width: 100%;
+		@include responsive(s1){
+			font-size: 2em;
+			margin-top: 0.8em;
+			margin-bottom: 0px;
+		}
 		a{
 			color: $color-white!important;
 			font-family: $font-primary-light!important;
@@ -377,6 +506,14 @@ body{
 		margin-top: 5em;
 		padding-left: 17em;
 		padding-right: 17em;
+		@include responsive(s1){
+			margin-top: 2em;
+		}
+		@include responsive(s2){
+			margin-top: 2em;
+			padding-left: 2em;
+			padding-right: 2em;
+		}
 		ul{
 			margin: 0;
 			padding: 0;
@@ -386,6 +523,17 @@ body{
 			align-items: center;
 			li{
 				list-style: none;
+				a{
+					img{
+						@include transition(0.15s);
+						@include responsive(s2){
+							height: 60px;
+						}
+						&:hover{
+							@include scale(0.9);
+						}
+					}
+				}
 			}
 		}
 	}

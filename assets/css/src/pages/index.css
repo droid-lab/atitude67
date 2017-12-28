@@ -70,10 +70,35 @@ body {
       #home nav ul li {
         list-style: none; }
         #home nav ul li a {
+          position: relative;
+          float: left;
           font-size: 2.7em;
           color: rgba(255, 255, 255, 0.9);
           font-family: "BebasNeueRegular", sans-serif;
           font-weight: normal; }
+          #home nav ul li a::after {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.9);
+            content: '';
+            opacity: 0;
+            -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+            -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+            transition: opacity 0.3s, transform 0.3s;
+            -webkit-transform: translateY(10px);
+            -moz-transform: translateY(10px);
+            transform: translateY(10px); }
+            @media only screen and (max-width: 1200px) {
+              #home nav ul li a::after {
+                height: 2px; } }
+          #home nav ul li a:hover::after, #home nav ul li a:focus::after {
+            opacity: 1;
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            transform: translateY(0px); }
     @media only screen and (max-width: 1200px) {
       #home nav {
         margin-top: 7.5em;
@@ -105,9 +130,12 @@ body {
       align-items: center; }
       #home .social-icons ul li {
         list-style: none; }
-        #home .social-icons ul li a img {
-          height: 100px;
-          width: 100px; }
+        #home .social-icons ul li a {
+          position: relative;
+          float: left; }
+          #home .social-icons ul li a img {
+            height: 100px;
+            width: 100px; }
     @media only screen and (max-width: 1200px) {
       #home .social-icons {
         margin-left: 16em;
@@ -136,6 +164,31 @@ body {
       #home .social-icons {
         margin-left: 0em;
         margin-right: 0em; } }
+  #home .button--ivana::before, #home .button--ivana::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 0 0 10px #fff; }
+    @media only screen and (max-width: 1200px) {
+      #home .button--ivana::before, #home .button--ivana::after {
+        margin: -30px 0 0 -30px;
+        width: 60px;
+        height: 60px; } }
+  #home .button--ivana:hover::before {
+    -webkit-animation: animation-button-ivana-1 0.5s forwards;
+    animation: animation-button-ivana-1 0.5s forwards; }
+  #home .button--ivana:hover::after {
+    -webkit-animation: animation-button-ivana-2 0.8s forwards;
+    animation: animation-button-ivana-2 0.8s forwards;
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s; }
 
 #group-bg {
   background-image: url("../../../images/bg-lg-02.jpg");
@@ -147,12 +200,18 @@ body {
   @media only screen and (max-width: 768px) {
     #group-bg {
       background-image: url("../../../images/bg-sm-02.jpg");
-      height: 650px; } }
+      height: 868px; } }
   #group-bg #videos h1 {
     margin-top: 0.5em; }
+    @media only screen and (max-width: 1200px) {
+      #group-bg #videos h1 {
+        font-size: 4.5em; } }
   #group-bg #videos h2 {
     font-size: 4em;
     margin-top: 0.1em; }
+    @media only screen and (max-width: 1200px) {
+      #group-bg #videos h2 {
+        font-size: 3em; } }
   #group-bg #videos .box-video {
     display: flex;
     justify-content: center;
@@ -161,6 +220,9 @@ body {
     float: left;
     width: 100%;
     margin-top: 3em; }
+    @media only screen and (max-width: 1200px) {
+      #group-bg #videos .box-video {
+        margin-top: 2em; } }
     #group-bg #videos .box-video .video-decoration {
       padding: 30px;
       background-image: url("../../../images/bg-video.png");
@@ -173,27 +235,43 @@ body {
       align-items: center;
       position: relative;
       float: left; }
+      @media only screen and (max-width: 992px) {
+        #group-bg #videos .box-video .video-decoration {
+          background-image: none; } }
       #group-bg #videos .box-video .video-decoration .video {
         border: 15px solid black;
         border-top-width: 5px;
         border-bottom-width: 5px;
-        height: 100%;
+        height: 110%;
         width: 93%;
-        margin-left: 25px; }
+        margin-left: 25px;
+        border-radius: 21px; }
+        @media only screen and (max-width: 1200px) {
+          #group-bg #videos .box-video .video-decoration .video {
+            border: 15px solid black;
+            border-top-width: 5px;
+            border-bottom-width: 5px;
+            height: 114%;
+            width: 94%;
+            margin-left: 25px;
+            border-radius: 15px; } }
   #group-bg #agenda h1 {
-    margin-top: 1.5em !important;
-    margin-bottom: 1.3em !important; }
+    margin-top: 0.9em !important;
+    margin-bottom: 0.9em !important; }
     @media only screen and (max-width: 1200px) {
       #group-bg #agenda h1 {
         margin-top: 0.7em !important;
-        margin-bottom: 0.7em !important; } }
+        margin-bottom: 0.7em !important;
+        font-size: 4.5em; } }
   #group-bg #agenda .row {
     margin: 0px;
     margin-bottom: 40px; }
+  #group-bg #agenda .last-row {
+    margin: 0px; }
   #group-bg #agenda .item h1 {
     margin-top: 0 !important;
     margin-bottom: 5px !important;
-    font-size: 8em !important;
+    font-size: 8em;
     text-align: left; }
   #group-bg #agenda .item h2 {
     font-size: 4em;
@@ -217,6 +295,21 @@ body {
   #group-bg #agenda .item .col-agenda {
     padding: 0px 30px;
     border-left: 2px solid #fff; }
+  #group-bg #agenda .carrousel-agenda-mobile .item {
+    position: relative;
+    float: left;
+    width: 75%;
+    padding: 3em;
+    border: 1px solid #fff;
+    margin-left: 12.4%;
+    margin-right: 5%;
+    text-align: center !important; }
+    #group-bg #agenda .carrousel-agenda-mobile .item h1 {
+      font-size: 6em !important;
+      text-align: center !important; }
+    #group-bg #agenda .carrousel-agenda-mobile .item h2 {
+      font-size: 3em !important;
+      text-align: center !important; }
 
 #blog {
   background-image: url("../../../images/bg-lg-03.jpg");
@@ -230,17 +323,22 @@ body {
       background-image: url("../../../images/bg-sm-03.jpg");
       height: 232px; } }
   #blog .item {
-    text-align: center; }
+    text-align: center;
+    margin-top: 4em; }
+    @media only screen and (max-width: 992px) {
+      #blog .item {
+        margin-top: 2em; } }
     #blog .item img {
-      width: 95%;
+      width: 80%;
       margin: 0 auto;
-      margin-top: 2.45em; }
+      margin-bottom: 12px;
+      box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.39); }
       @media only screen and (max-width: 1200px) {
         #blog .item img {
-          width: 70%; } }
+          width: 60%; } }
     #blog .item h1 {
       text-align: left;
-      margin-top: 1em;
+      margin-top: 0em;
       font-family: "BebasNeueRegular", sans-serif;
       color: #fff;
       font-size: 4em;
@@ -248,7 +346,8 @@ body {
       margin-bottom: 0em; }
       @media only screen and (max-width: 1200px) {
         #blog .item h1 {
-          font-size: 3em; } }
+          font-size: 3em;
+          max-width: initial; } }
     #blog .item h2 {
       text-align: left;
       margin-top: 0.5em;
@@ -257,6 +356,11 @@ body {
       font-size: 2em;
       max-width: 320px;
       margin-bottom: 1em; }
+      @media only screen and (max-width: 1200px) {
+        #blog .item h2 {
+          font-size: 1.5em;
+          max-width: initial;
+          margin-bottom: 0.5em; } }
     #blog .item p {
       text-align: left;
       font-size: 0.9em;
@@ -267,12 +371,22 @@ body {
 #contact {
   background-image: url("../../../images/bg-lg-04.jpg");
   height: 516px; }
+  @media only screen and (max-width: 1200px) {
+    #contact h1 {
+      font-size: 3em;
+      margin-top: 1em;
+      margin-bottom: 0px; } }
   #contact h2 {
     position: relative;
     float: left;
     margin-top: 40px;
     font-size: 2.5em;
     width: 100%; }
+    @media only screen and (max-width: 1200px) {
+      #contact h2 {
+        font-size: 2em;
+        margin-top: 0.8em;
+        margin-bottom: 0px; } }
     #contact h2 a {
       color: #fff !important;
       font-family: "BebasNeueLight", sans-serif !important;
@@ -304,6 +418,14 @@ body {
     margin-top: 5em;
     padding-left: 17em;
     padding-right: 17em; }
+    @media only screen and (max-width: 1200px) {
+      #contact footer {
+        margin-top: 2em; } }
+    @media only screen and (max-width: 992px) {
+      #contact footer {
+        margin-top: 2em;
+        padding-left: 2em;
+        padding-right: 2em; } }
     #contact footer ul {
       margin: 0;
       padding: 0;
@@ -313,6 +435,18 @@ body {
       align-items: center; }
       #contact footer ul li {
         list-style: none; }
+        #contact footer ul li a img {
+          -webkit-transition: all 0.15s ease-in-out 0s;
+          -moz-transform: all 0.15s ease-in-out 0s;
+          -ms-transition: all 0.15s ease-in-out 0s;
+          transition: all 0.15s ease-in-out 0s; }
+          @media only screen and (max-width: 992px) {
+            #contact footer ul li a img {
+              height: 60px; } }
+          #contact footer ul li a img:hover {
+            -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            transform: scale(0.9); }
   @media only screen and (max-width: 1200px) {
     #contact {
       background-image: url("../../../images/bg-md-04.jpg");

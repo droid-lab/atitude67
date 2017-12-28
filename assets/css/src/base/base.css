@@ -1,3 +1,51 @@
+@-webkit-keyframes animation-button-ivana-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1); } }
+
+@keyframes animation-button-ivana-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1); } }
+
+@-webkit-keyframes animation-button-ivana-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1); } }
+
+@keyframes animation-button-ivana-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1); } }
+
 @font-face {
   font-family: "BebasNeueBold";
   src: url("../../../fonts/BebasNeueBold.eot?") format("eot"), url("../../../fonts/BebasNeueBold.woff") format("woff"), url("../../../fonts/BebasNeueBold.ttf") format("truetype"), url("../../../fonts/BebasNeueBold.svg#BebasNeueBold") format("svg"); }
@@ -14,10 +62,142 @@
   font-family: "Neoneon";
   src: url("../../../fonts/Neoneon.eot?") format("eot"), url("../../../fonts/Neoneon.woff") format("woff"), url("../../../fonts/Neoneon.ttf") format("truetype"), url("../../../fonts/Neoneon.svg#Neoneon") format("svg"); }
 
-.carousel-default {
+.carousel-default, .carrousel-agenda-mobile {
   position: relative;
   float: left;
   width: 100%; }
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: calc(50% - 25px);
+  margin: 0px;
+  width: 100%; }
+  .owl-carousel .owl-nav .owl-prev {
+    background: none;
+    padding: 0px;
+    border-radius: 0px;
+    float: left; }
+    .owl-carousel .owl-nav .owl-prev:hover {
+      background-color: transparent; }
+    .owl-carousel .owl-nav .owl-prev .arrow-prev {
+      height: 50px;
+      width: 50px;
+      position: relative;
+      float: left;
+      background-image: url("../../../images/arrow-prev.svg");
+      margin-left: -30px;
+      -webkit-transition: all 0.15s ease-in-out 0s;
+      -moz-transform: all 0.15s ease-in-out 0s;
+      -ms-transition: all 0.15s ease-in-out 0s;
+      transition: all 0.15s ease-in-out 0s; }
+      @media only screen and (max-width: 992px) {
+        .owl-carousel .owl-nav .owl-prev .arrow-prev {
+          margin-right: 0px; } }
+      .owl-carousel .owl-nav .owl-prev .arrow-prev:hover {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9); }
+  .owl-carousel .owl-nav .owl-next {
+    background: none;
+    padding: 0px;
+    border-radius: 0px;
+    float: right; }
+    .owl-carousel .owl-nav .owl-next:hover {
+      background-color: transparent; }
+    .owl-carousel .owl-nav .owl-next .arrow-next {
+      height: 50px;
+      width: 50px;
+      position: relative;
+      float: left;
+      background-image: url("../../../images/arrow-next.svg");
+      margin-right: -30px;
+      -webkit-transition: all 0.15s ease-in-out 0s;
+      -moz-transform: all 0.15s ease-in-out 0s;
+      -ms-transition: all 0.15s ease-in-out 0s;
+      transition: all 0.15s ease-in-out 0s; }
+      @media only screen and (max-width: 992px) {
+        .owl-carousel .owl-nav .owl-next .arrow-next {
+          margin-right: 0px; } }
+      .owl-carousel .owl-nav .owl-next .arrow-next:hover {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9); }
+
+.owl-carousel .owl-dots {
+  margin-top: 1em; }
+  .owl-carousel .owl-dots .owl-dot span {
+    width: 15px;
+    height: 15px;
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    -moz-transform: all 0.15s ease-in-out 0s;
+    -ms-transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s; }
+    @media only screen and (max-width: 992px) {
+      .owl-carousel .owl-dots .owl-dot span {
+        width: 7px;
+        height: 7px; } }
+  .owl-carousel .owl-dots .owl-dot.active span {
+    background: #02e2fe; }
+  .owl-carousel .owl-dots .owl-dot:hover span {
+    background: #02e2fe; }
+
+.carrousel-agenda .item {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-left: 3em; }
+
+.carrousel-agenda .owl-nav {
+  top: calc(50% - 49px); }
+
+.carrousel-agenda .owl-dots .owl-dot {
+  margin-top: 1em; }
+  .carrousel-agenda .owl-dots .owl-dot.active span {
+    background: #61216f !important; }
+  .carrousel-agenda .owl-dots .owl-dot:hover span {
+    background: #61216f !important; }
+
+.carrousel-agenda-mobile .item {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-left: 3em; }
+
+.carrousel-agenda-mobile .owl-nav {
+  top: calc(50% - 49px); }
+
+.carrousel-agenda-mobile .owl-dots .owl-dot {
+  margin-top: 1em; }
+  .carrousel-agenda-mobile .owl-dots .owl-dot.active span {
+    background: #61216f !important; }
+  .carrousel-agenda-mobile .owl-dots .owl-dot:hover span {
+    background: #61216f !important; }
+
+.carrousel-blog .owl-dots .owl-dot {
+  margin-top: 1em; }
+  .carrousel-blog .owl-dots .owl-dot.active span {
+    background: #213d7c !important; }
+  .carrousel-blog .owl-dots .owl-dot:hover span {
+    background: #213d7c !important; }
+  @media only screen and (max-width: 1200px) {
+    .carrousel-blog .owl-dots .owl-dot {
+      margin-top: 0px; } }
+
+@media only screen and (max-width: 1200px) {
+  .carrousel-blog .owl-dots {
+    margin-top: 0px; } }
+
+@media only screen and (max-width: 992px) {
+  .owl-carousel .owl-nav .owl-next {
+    margin-right: -60px; }
+  .owl-carousel .owl-nav .owl-prev {
+    margin-left: -25px; } }
+
+@media only screen and (max-width: 866px) {
+  .owl-carousel .owl-nav .owl-next {
+    display: none; }
+  .owl-carousel .owl-nav .owl-prev {
+    display: none; } }
 
 * {
   outline: none; }
@@ -59,12 +239,12 @@ a {
     text-decoration: none; }
 
 ::-moz-selection {
-  color: #FF0000;
-  background: #EEEEEE; }
+  color: #213d7c;
+  background: #000; }
 
 ::selection {
-  color: #FF0000;
-  background: #EEEEEE; }
+  color: #213d7c;
+  background: #000; }
 
 h1, h2, h3, h4 {
   font-family: "BebasNeueRegular", sans-serif;

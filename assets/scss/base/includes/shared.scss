@@ -57,13 +57,13 @@ a{
 // Selection
 
 ::-moz-selection {
-  color: $color-red;
-  background: $color-gray;
+  color: $color-dark-blue;
+  background: $color-black;
 }
 
 ::selection {
-  color: $color-red;
-  background: $color-gray;
+  color: $color-dark-blue;
+  background: $color-black;
 }
 
 // Headings
