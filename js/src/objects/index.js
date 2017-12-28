@@ -3,10 +3,10 @@ Index = {
 		configs: {
 			'default' : {
 				loop               : true,
-				nav                : true,
-				pagination         : true,
+				nav                : false,
+				pagination         : false,
 				items              : 1,
-				dots               : true,
+				dots               : false,
 				autoplay           : false,
 				autoplayTimeout    : 3000,
 				autoplayHoverPause : true,

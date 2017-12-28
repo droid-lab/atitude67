@@ -18,6 +18,12 @@ body {
   color: #fff;
   background-color: #000;
   font-size: 14px; }
+  @media only screen and (max-width: 1200px) {
+    body {
+      font-size: 12px; } }
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 10px; } }
 
 /* Extends */
 .bgs, #home, #group-bg, #blog, #contact {
@@ -39,15 +45,97 @@ body {
 
 #home {
   background-image: url("../../../images/bg-lg-01.jpg");
-  height: 1208px; }
+  height: 1124px;
+  /* Menu */
+  /* Social Icons */ }
   @media only screen and (max-width: 1200px) {
     #home {
       background-image: url("../../../images/bg-md-01.jpg");
-      height: 755px; } }
+      height: 703px; } }
   @media only screen and (max-width: 768px) {
     #home {
       background-image: url("../../../images/bg-sm-01.jpg");
-      height: 483px; } }
+      height: 450px; } }
+  #home nav {
+    margin-top: 10em;
+    margin-left: 15em;
+    margin-right: 17em; }
+    #home nav ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center; }
+      #home nav ul li {
+        list-style: none; }
+        #home nav ul li a {
+          font-size: 2.7em;
+          color: rgba(255, 255, 255, 0.9);
+          font-family: "BebasNeueRegular", sans-serif;
+          font-weight: normal; }
+    @media only screen and (max-width: 1200px) {
+      #home nav {
+        margin-top: 7.5em;
+        margin-left: 16em;
+        margin-right: 18em; }
+        #home nav ul li a {
+          font-size: 2.2em; } }
+    @media only screen and (max-width: 992px) {
+      #home nav {
+        margin-top: 7.5em;
+        margin-left: 10em;
+        margin-right: 12em; }
+        #home nav ul li a {
+          font-size: 2em; } }
+    @media only screen and (max-width: 768px) {
+      #home nav {
+        display: none; } }
+  #home .social-icons {
+    position: relative;
+    margin-top: 47em;
+    margin-left: 6em;
+    margin-right: 9em; }
+    #home .social-icons ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center; }
+      #home .social-icons ul li {
+        list-style: none; }
+        #home .social-icons ul li a img {
+          height: 100px;
+          width: 100px; }
+    @media only screen and (max-width: 1200px) {
+      #home .social-icons {
+        margin-left: 16em;
+        margin-right: 18em;
+        margin-top: 35em; }
+        #home .social-icons ul li a img {
+          height: 60px;
+          width: 60px; } }
+    @media only screen and (max-width: 992px) {
+      #home .social-icons {
+        margin-left: 7em;
+        margin-right: 8em;
+        margin-top: 35em; }
+        #home .social-icons ul li a img {
+          height: 50px;
+          width: 50px; } }
+    @media only screen and (max-width: 768px) {
+      #home .social-icons {
+        margin-left: 5em;
+        margin-right: 5em; } }
+    @media only screen and (max-width: 480px) {
+      #home .social-icons {
+        margin-left: 1em;
+        margin-right: 1em; } }
+    @media only screen and (max-width: 320px) {
+      #home .social-icons {
+        margin-left: 0em;
+        margin-right: 0em; } }
 
 #group-bg {
   background-image: url("../../../images/bg-lg-02.jpg");
@@ -60,8 +148,71 @@ body {
     #group-bg {
       background-image: url("../../../images/bg-sm-02.jpg");
       height: 650px; } }
+  #group-bg #videos h1 {
+    margin-top: 0.5em; }
   #group-bg #videos h2 {
-    font-size: 4em; }
+    font-size: 4em;
+    margin-top: 0.1em; }
+  #group-bg #videos .box-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 3em; }
+    #group-bg #videos .box-video .video-decoration {
+      padding: 30px;
+      background-image: url("../../../images/bg-video.png");
+      background-position: center center;
+      background-size: cover;
+      width: 58em;
+      height: 28em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      float: left; }
+      #group-bg #videos .box-video .video-decoration .video {
+        border: 15px solid black;
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+        height: 100%;
+        width: 93%;
+        margin-left: 25px; }
+  #group-bg #agenda h1 {
+    margin-top: 1.5em !important;
+    margin-bottom: 1.3em !important; }
+  #group-bg #agenda .row {
+    margin: 0px;
+    margin-bottom: 40px; }
+  #group-bg #agenda .item h1 {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+    font-size: 8em !important;
+    text-align: left; }
+  #group-bg #agenda .item h2 {
+    font-size: 4em;
+    font-family: "Neoneon", sans-serif !important;
+    color: #fff !important;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: -0.3em; }
+  #group-bg #agenda .item .line-1 {
+    margin-top: -0.3em; }
+  #group-bg #agenda .item .line-3 {
+    font-family: "BebasNeueBold", sans-serif; }
+  #group-bg #agenda .item .line {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-size: 2em;
+    margin: 0px;
+    line-height: 1em; }
+  #group-bg #agenda .item .col-agenda {
+    padding: 0px 30px;
+    border-left: 2px solid #fff; }
 
 #blog {
   background-image: url("../../../images/bg-lg-03.jpg");
@@ -74,6 +225,28 @@ body {
     #blog {
       background-image: url("../../../images/bg-sm-03.jpg");
       height: 232px; } }
+  #blog .item img {
+    margin-top: 2.45em;
+    width: 95%; }
+  #blog .item h1 {
+    margin-top: 1em;
+    font-family: "BebasNeueRegular", sans-serif;
+    color: #fff;
+    font-size: 4em;
+    max-width: 320px;
+    margin-bottom: 0em; }
+  #blog .item h2 {
+    margin-top: 0.5em;
+    font-family: "BebasNeueBold", sans-serif;
+    color: #fff;
+    font-size: 2em;
+    max-width: 320px;
+    margin-bottom: 1em; }
+  #blog .item p {
+    font-size: 1.1em;
+    text-transform: none;
+    max-width: 400px;
+    font-family: "Open Sans", sans-serif; }
 
 #contact {
   background-image: url("../../../images/bg-lg-04.jpg");
