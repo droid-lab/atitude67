@@ -256,8 +256,8 @@ body{
 			@include responsive(s1){
 				font-size: 4.5em;
 			}
-			@include responsive(s4){
-				font-size: 3em;
+			@include responsive(s2){
+				font-size: 4em;
 			}
 		}
 		h2{
@@ -340,6 +340,9 @@ body{
 				margin-top: 0.7em!important;
 				margin-bottom: 0.7em!important;
 				font-size: 4.5em;
+			}
+			@include responsive(s2){
+				font-size: 4em;
 			}
 		}
 		.row{
@@ -493,6 +496,44 @@ body{
 				max-width: initial;
 			}
 		}
+		.box-button{
+			position: relative;
+			float: left;
+			display: block;
+			width: 100%;
+			@include responsive(s3){
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+		button{
+			position: relative;
+			float: left;
+			border: 1px solid $color-white;
+			background-color: transparent;
+			padding: 10px 15px;
+			font-size: 1.8em;
+			margin-top: 1em;
+			margin-bottom: 1em;
+			color: $color-white;
+			@include transition(0.25s);
+			&:hover{
+				background-color: $color-white;
+				color: $color-dark-blue;
+			}
+			@include responsive(s1){
+				padding: 5px 10px;
+				font-size: 1.5em;
+			}
+			@include responsive(s2){
+				width: 140px;
+				margin-left: 100px;
+				margin: 0 auto;
+				margin-top: 0.6em;
+				margin-bottom: 0.6em;
+			}
+		}
 	}
 }
 
@@ -503,6 +544,9 @@ body{
 			font-size: 4.5em;
 			margin-top: 1em;
 			margin-bottom: 0px;
+		}
+		@include responsive(s2){
+			font-size: 4em;
 		}
 	}
 	h2{

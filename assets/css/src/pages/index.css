@@ -208,9 +208,9 @@ body {
     @media only screen and (max-width: 1200px) {
       #group-bg #videos h1 {
         font-size: 4.5em; } }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 992px) {
       #group-bg #videos h1 {
-        font-size: 3em; } }
+        font-size: 4em; } }
   #group-bg #videos h2 {
     font-size: 4em;
     margin-top: 0.1em; }
@@ -284,6 +284,9 @@ body {
         margin-top: 0.7em !important;
         margin-bottom: 0.7em !important;
         font-size: 4.5em; } }
+    @media only screen and (max-width: 992px) {
+      #group-bg #agenda h1 {
+        font-size: 4em; } }
   #group-bg #agenda .row {
     margin: 0px;
     margin-bottom: 40px; }
@@ -413,6 +416,44 @@ body {
         #blog .item p {
           font-size: 0.9em;
           max-width: initial; } }
+    #blog .item .box-button {
+      position: relative;
+      float: left;
+      display: block;
+      width: 100%; }
+      @media only screen and (max-width: 768px) {
+        #blog .item .box-button {
+          display: flex;
+          justify-content: center;
+          align-items: center; } }
+    #blog .item button {
+      position: relative;
+      float: left;
+      border: 1px solid #fff;
+      background-color: transparent;
+      padding: 10px 15px;
+      font-size: 1.8em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      color: #fff;
+      -webkit-transition: all 0.25s ease-in-out 0s;
+      -moz-transform: all 0.25s ease-in-out 0s;
+      -ms-transition: all 0.25s ease-in-out 0s;
+      transition: all 0.25s ease-in-out 0s; }
+      #blog .item button:hover {
+        background-color: #fff;
+        color: #213d7c; }
+      @media only screen and (max-width: 1200px) {
+        #blog .item button {
+          padding: 5px 10px;
+          font-size: 1.5em; } }
+      @media only screen and (max-width: 992px) {
+        #blog .item button {
+          width: 140px;
+          margin-left: 100px;
+          margin: 0 auto;
+          margin-top: 0.6em;
+          margin-bottom: 0.6em; } }
 
 #contact {
   background-image: url("../../../images/bg-lg-04.jpg");
@@ -422,6 +463,9 @@ body {
       font-size: 4.5em;
       margin-top: 1em;
       margin-bottom: 0px; } }
+  @media only screen and (max-width: 992px) {
+    #contact h1 {
+      font-size: 4em; } }
   #contact h2 {
     position: relative;
     float: left;
