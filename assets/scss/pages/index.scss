@@ -447,7 +447,7 @@ body{
 			font-family: $font-primary;
 			color: $color-white;
 			font-size: 4em;
-			max-width: 320px;
+			max-width: 350px;
 			margin-bottom: 0em;
 			text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 			@include responsive(s1){
@@ -465,7 +465,7 @@ body{
 			font-family: $font-primary-bold;
 			color: $color-white;
 			font-size: 2em;
-			max-width: 320px;
+			max-width: 350px;
 			margin-bottom: 1em;
 			text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 			@include responsive(s1){
@@ -481,7 +481,7 @@ body{
 			text-align: left;
 			font-size: 0.9em;
 			text-transform: none;
-			max-width: 400px;
+			max-width: 450px;
 			font-family: $font-tertiary;
 			@include responsive(s3){
 				font-size: 1em;

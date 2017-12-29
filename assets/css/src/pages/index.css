@@ -370,7 +370,7 @@ body {
       font-family: "BebasNeueRegular", sans-serif;
       color: #fff;
       font-size: 4em;
-      max-width: 320px;
+      max-width: 350px;
       margin-bottom: 0em;
       text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); }
       @media only screen and (max-width: 1200px) {
@@ -387,7 +387,7 @@ body {
       font-family: "BebasNeueBold", sans-serif;
       color: #fff;
       font-size: 2em;
-      max-width: 320px;
+      max-width: 350px;
       margin-bottom: 1em;
       text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); }
       @media only screen and (max-width: 1200px) {
@@ -402,7 +402,7 @@ body {
       text-align: left;
       font-size: 0.9em;
       text-transform: none;
-      max-width: 400px;
+      max-width: 450px;
       font-family: "Open Sans", sans-serif; }
       @media only screen and (max-width: 768px) {
         #blog .item p {
