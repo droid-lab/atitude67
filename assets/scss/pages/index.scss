@@ -485,6 +485,10 @@ body{
 				max-width: initial;
 			}
 			@include responsive(s4){
+				font-size: 0.95em;
+				max-width: initial;
+			}
+			@include responsive(s5){
 				font-size: 0.9em;
 				max-width: initial;
 			}
@@ -496,7 +500,7 @@ body{
 	h1{
 		@extend .title-big;
 		@include responsive(s1){
-			font-size: 3em;
+			font-size: 4.5em;
 			margin-top: 1em;
 			margin-bottom: 0px;
 		}
