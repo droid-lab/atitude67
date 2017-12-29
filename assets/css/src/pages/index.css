@@ -405,6 +405,10 @@ body {
         #blog .item p {
           font-size: 1em;
           max-width: initial; } }
+      @media only screen and (max-width: 480px) {
+        #blog .item p {
+          font-size: 0.9em;
+          max-width: initial; } }
 
 #contact {
   background-image: url("../../../images/bg-lg-04.jpg");

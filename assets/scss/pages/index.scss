@@ -484,6 +484,10 @@ body{
 				font-size: 1em;
 				max-width: initial;
 			}
+			@include responsive(s4){
+				font-size: 0.9em;
+				max-width: initial;
+			}
 		}
 	}
 }
