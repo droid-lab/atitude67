@@ -134,8 +134,8 @@
     transition: all 0.15s ease-in-out 0s; }
     @media only screen and (max-width: 992px) {
       .owl-carousel .owl-dots .owl-dot span {
-        width: 7px;
-        height: 7px; } }
+        width: 10px;
+        height: 10px; } }
   .owl-carousel .owl-dots .owl-dot.active span {
     background: #02e2fe; }
   .owl-carousel .owl-dots .owl-dot:hover span {
@@ -148,7 +148,7 @@
   margin-left: 3em; }
 
 .carrousel-agenda .owl-nav {
-  top: calc(50% - 49px); }
+  top: calc(50% - 60px); }
 
 .carrousel-agenda .owl-dots .owl-dot {
   margin-top: 1em; }

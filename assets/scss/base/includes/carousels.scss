@@ -74,8 +74,8 @@
 				height: 15px;
 				@include transition(0.15s);
 				@include responsive(s2){
-					width: 7px;
-					height: 7px;
+					width: 10px;
+					height: 10px;
 				}
 			}
 			&.active{
@@ -100,7 +100,7 @@
 		margin-left: 3em;
 	}
 	.owl-nav{
-		top: calc(50% - 49px);
+		top: calc(50% - 60px);
 	}
 	.owl-dots{
 		.owl-dot{

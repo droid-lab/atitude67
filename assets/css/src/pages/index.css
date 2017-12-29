@@ -41,7 +41,8 @@ body {
   position: relative;
   float: left;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  text-shadow: 4px 5px 8px rgba(0, 0, 0, 0.4); }
 
 #home {
   background-image: url("../../../images/bg-lg-01.jpg");
@@ -74,6 +75,7 @@ body {
           float: left;
           font-size: 2.7em;
           color: rgba(255, 255, 255, 0.9);
+          text-shadow: 4px 5px 8px rgba(0, 0, 0, 0.4);
           font-family: "BebasNeueRegular", sans-serif;
           font-weight: normal; }
           #home nav ul li a::after {
@@ -206,12 +208,18 @@ body {
     @media only screen and (max-width: 1200px) {
       #group-bg #videos h1 {
         font-size: 4.5em; } }
+    @media only screen and (max-width: 480px) {
+      #group-bg #videos h1 {
+        font-size: 3em; } }
   #group-bg #videos h2 {
     font-size: 4em;
     margin-top: 0.1em; }
     @media only screen and (max-width: 1200px) {
       #group-bg #videos h2 {
         font-size: 3em; } }
+    @media only screen and (max-width: 480px) {
+      #group-bg #videos h2 {
+        font-size: 2em; } }
   #group-bg #videos .box-video {
     display: flex;
     justify-content: center;
@@ -237,7 +245,13 @@ body {
       float: left; }
       @media only screen and (max-width: 992px) {
         #group-bg #videos .box-video .video-decoration {
-          background-image: none; } }
+          padding: 0px;
+          background-image: none;
+          width: 53em;
+          height: 28em; } }
+      @media only screen and (max-width: 768px) {
+        #group-bg #videos .box-video .video-decoration {
+          width: 100%; } }
       #group-bg #videos .box-video .video-decoration .video {
         border: 15px solid black;
         border-top-width: 5px;
@@ -255,6 +269,13 @@ body {
             width: 94%;
             margin-left: 25px;
             border-radius: 15px; } }
+        @media only screen and (max-width: 992px) {
+          #group-bg #videos .box-video .video-decoration .video {
+            border: none;
+            border-radius: 0px;
+            height: 100%;
+            width: 100%;
+            margin: 0px; } }
   #group-bg #agenda h1 {
     margin-top: 0.9em !important;
     margin-bottom: 0.9em !important; }
@@ -269,6 +290,7 @@ body {
   #group-bg #agenda .last-row {
     margin: 0px; }
   #group-bg #agenda .item h1 {
+    text-shadow: none !important;
     margin-top: 0 !important;
     margin-bottom: 5px !important;
     font-size: 8em;
@@ -327,7 +349,10 @@ body {
     margin-top: 4em; }
     @media only screen and (max-width: 992px) {
       #blog .item {
-        margin-top: 2em; } }
+        margin-top: 3em; } }
+    @media only screen and (max-width: 768px) {
+      #blog .item {
+        margin-top: 1.5em; } }
     #blog .item img {
       width: 80%;
       margin: 0 auto;
@@ -343,11 +368,16 @@ body {
       color: #fff;
       font-size: 4em;
       max-width: 320px;
-      margin-bottom: 0em; }
+      margin-bottom: 0em;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); }
       @media only screen and (max-width: 1200px) {
         #blog .item h1 {
           font-size: 3em;
           max-width: initial; } }
+      @media only screen and (max-width: 768px) {
+        #blog .item h1 {
+          font-size: 2.5em;
+          margin-bottom: 0.5em; } }
     #blog .item h2 {
       text-align: left;
       margin-top: 0.5em;
@@ -355,18 +385,26 @@ body {
       color: #fff;
       font-size: 2em;
       max-width: 320px;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); }
       @media only screen and (max-width: 1200px) {
         #blog .item h2 {
           font-size: 1.5em;
           max-width: initial;
           margin-bottom: 0.5em; } }
+      @media only screen and (max-width: 768px) {
+        #blog .item h2 {
+          display: none; } }
     #blog .item p {
       text-align: left;
       font-size: 0.9em;
       text-transform: none;
       max-width: 400px;
       font-family: "Open Sans", sans-serif; }
+      @media only screen and (max-width: 768px) {
+        #blog .item p {
+          font-size: 1em;
+          max-width: initial; } }
 
 #contact {
   background-image: url("../../../images/bg-lg-04.jpg");
@@ -426,6 +464,11 @@ body {
         margin-top: 2em;
         padding-left: 2em;
         padding-right: 2em; } }
+    @media only screen and (max-width: 768px) {
+      #contact footer {
+        margin-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em; } }
     #contact footer ul {
       margin: 0;
       padding: 0;
